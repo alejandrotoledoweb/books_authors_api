@@ -67,6 +67,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 gem "bcrypt", "~> 3.1", ">= 3.1.11"

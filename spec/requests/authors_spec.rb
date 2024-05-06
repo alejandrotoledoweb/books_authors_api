@@ -6,12 +6,13 @@ RSpec.describe 'Authors', type: :request do
   let!(:valid_headers) { auth_headers(user) }
 
   describe 'GET /index' do
-    let!(:authors) { FactoryBot.create_list(:author, 3, name: 'John Doe', birthdate: '1980-12-05') }
+    let!(:author) { FactoryBot.create(:author, name: 'Victor Allende', birthdate: '1980-12-20') }
+    let!(:author2) { FactoryBot.create(:author, name: 'Jane Doe', birthdate: '1980-12-20') }
 
     it 'returns all authors' do
       get '/api/v1/authors', headers: valid_headers
       expect(response).to have_http_status(:ok)
-      expect(JSON.parse(response.body).size).to eq(3)
+      expect(JSON.parse(response.body).size).to eq(2)
     end
   end
 

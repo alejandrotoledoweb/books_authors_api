@@ -93,4 +93,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
   config.include RequestHelper, type: :request
+  config.include AuthHelpers, type: :request
 end

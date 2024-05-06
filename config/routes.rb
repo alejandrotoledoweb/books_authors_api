@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   namespace :api do
     namespace :v1 do
-      # resources :books, only: %i[index create destroy]
-      # resources :authors, only: [:create]
+      resources :books, only: %i[index create destroy] do
+        get 'show', on: :collection, to: 'books#show'
+      end
+      resources :authors, only: %i[index create]
       post "/authenticate", to: "authentication#create"
       post "/create", to: "users#create"
     end

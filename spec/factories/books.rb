@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :book do
-    title { "MyString" }
-    published_year { 1 }
-    author { nil }
+    # title { "Unique Title" }
+    # published_year { 2021 }
+    # author
   end
 end

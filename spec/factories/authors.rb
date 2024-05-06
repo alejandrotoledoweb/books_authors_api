@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :author do
-    name { "MyString" }
-    birhtdate { "2024-05-06" }
+    # name { "John Doe" }
+    # birthdate { "1970-01-01" }
   end
 end

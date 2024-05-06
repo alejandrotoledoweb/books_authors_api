@@ -13,12 +13,16 @@ module Api
       end
 
       def show
-        title = params[:title].downcase
-        book = Book.where('lower(title) = ?', title).first
-        if book
-          render json: book_as_json(book)
+        if params[:title].present?
+          title = params[:title].downcase
+          book = Book.find_by('lower(title) = ?', title)
+          if book
+            render json: book_as_json(book)
+          else
+            render json: { error: 'Book not found' }, status: :not_found
+          end
         else
-          render json: { error: 'Book not found' }, status: :not_found
+          render json: { error: 'Title parameter is missing' }, status: :bad_request
         end
       end
 

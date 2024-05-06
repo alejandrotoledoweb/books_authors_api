@@ -1,7 +1,5 @@
-# spec/requests/books_spec.rb
 require 'rails_helper'
 require 'json'
-# require 'pry'
 
 RSpec.describe Book, type: :request do
 

@@ -54,8 +54,7 @@ Method: POST
 URL: /api/v1/create
 Headers: Authentication: "Bearer <token>"
 Body:
-json
-Copy code
+
 {
   "username": "user5",
   "password": "foobar123",

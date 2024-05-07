@@ -56,9 +56,11 @@ Headers: Authentication: "Bearer <token>"
 Body:
 
 {
-  "username": "user5",
-  "password": "foobar123",
-  "password_confirmation": "foobar123"
+    "user": {
+    "username": "user10",
+    "password": "foobar123",
+    "password_confirmation": "foobar123"
+    }
 }
 ```
 

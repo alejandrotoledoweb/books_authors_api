@@ -83,6 +83,7 @@ Copy code
 Get All Books
 Method: GET
 URL: /api/v1/books
+pagination_params: offset, limit
 Headers: Authentication: "Bearer <token>"
 ````
 ```
@@ -114,6 +115,7 @@ Headers: Authentication: "Bearer <token>"
 Show All Authors
 Method: GET
 URL: /api/v1/authors
+pagination_params: offset, limit
 Headers: Authentication: "Bearer <token>"
 ````
 ```

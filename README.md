@@ -70,8 +70,6 @@ Method: POST
 URL: /api/v1/authenticate
 Headers: Authentication: "Bearer <token>"
 Body:
-json
-Copy code
 {
   "username": "Admin",
   "password": "admin123456"
